@@ -22,6 +22,7 @@ Partial Class toy_crud
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -39,16 +40,22 @@ Partial Class toy_crud
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.agecodebox = New System.Windows.Forms.ComboBox()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(283, 40)
+        Me.DataGridView1.Location = New System.Drawing.Point(354, 40)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(490, 257)
+        Me.DataGridView1.RowHeadersWidth = 46
+        Me.DataGridView1.Size = New System.Drawing.Size(525, 354)
         Me.DataGridView1.TabIndex = 0
         '
         'TextBox1
@@ -156,7 +163,7 @@ Partial Class toy_crud
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(347, 323)
+        Me.Button1.Location = New System.Drawing.Point(354, 418)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 13
@@ -165,7 +172,7 @@ Partial Class toy_crud
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(502, 323)
+        Me.Button2.Location = New System.Drawing.Point(564, 418)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 14
@@ -174,7 +181,7 @@ Partial Class toy_crud
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(660, 323)
+        Me.Button3.Location = New System.Drawing.Point(804, 409)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 15
@@ -189,11 +196,40 @@ Partial Class toy_crud
         Me.agecodebox.Size = New System.Drawing.Size(121, 21)
         Me.agecodebox.TabIndex = 16
         '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(257, 261)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 17
+        Me.Button4.Text = "photo"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
+        Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(50, 147)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(89, 64)
+        Me.PictureBox1.TabIndex = 18
+        Me.PictureBox1.TabStop = False
+        '
         'toy_crud
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1289, 529)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.agecodebox)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -215,6 +251,7 @@ Partial Class toy_crud
         Me.Text = "toy_crud"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -237,4 +274,8 @@ Partial Class toy_crud
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents agecodebox As ComboBox
+    Friend WithEvents Button4 As Button
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents ImageList1 As ImageList
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
