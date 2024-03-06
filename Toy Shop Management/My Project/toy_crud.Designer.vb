@@ -38,6 +38,7 @@ Partial Class toy_crud
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.agecodebox = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -74,7 +75,7 @@ Partial Class toy_crud
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(151, 218)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(151, 238)
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(120, 20)
         Me.NumericUpDown1.TabIndex = 4
@@ -180,11 +181,20 @@ Partial Class toy_crud
         Me.Button3.Text = "Delete"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'agecodebox
+        '
+        Me.agecodebox.FormattingEnabled = True
+        Me.agecodebox.Location = New System.Drawing.Point(151, 214)
+        Me.agecodebox.Name = "agecodebox"
+        Me.agecodebox.Size = New System.Drawing.Size(121, 21)
+        Me.agecodebox.TabIndex = 16
+        '
         'toy_crud
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.agecodebox)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -226,4 +236,5 @@ Partial Class toy_crud
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents agecodebox As ComboBox
 End Class

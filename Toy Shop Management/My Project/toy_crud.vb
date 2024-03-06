@@ -8,6 +8,18 @@ Public Class toy_crud
         Dim connection_string As New String("Data Source=localhost;" + "password=int1; User id=int1;" + "Provider=ORAOLEDB.Oracle;")
         connection = New OleDbConnection(connection_string)
         filldatagrid()
+        fillagecode()
+    End Sub
+
+    Private Sub fillagecode()
+        ds = New DataSet
+        Dim tcp As New OleDbDataAdapter("select * from age_category", connection)
+        tcp.Fill(ds, "age_category")
+        agecodebox.DataSource = ds.Tables("age_category")
+        agecodebox.DisplayMember = "years"
+        agecodebox.ValueMember = "age_code"
+
+
     End Sub
 
     Private Sub filldatagrid()
@@ -33,7 +45,9 @@ Public Class toy_crud
             command.Parameters.AddWithValue("?", CInt(TextBox1.Text))
             command.Parameters.AddWithValue("?", TextBox2.Text)
             command.Parameters.AddWithValue("?", descbox.Text)
-            command.Parameters.AddWithValue("?", CInt(NumericUpDown1.Value))
+            command.Parameters.AddWithValue("?", agecodebox.SelectedValue)
+            NumericUpDown1.Value = agecodebox.SelectedValue
+            'command.Parameters.AddWithValue("?", CInt(NumericUpDown1.Value))
             command.Parameters.AddWithValue("?", TextBox3.Text)
             command.Parameters.AddWithValue("?", CInt(TextBox4.Text))
 

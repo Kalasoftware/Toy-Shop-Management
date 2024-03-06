@@ -1,0 +1,17 @@
+create table toys(toy_id integer,toy_name varchar(40),descr varchar(60),age_code integer, image_path varchar(200),stock integer)
+
+
+create table age_category(age_code integer,years varchar(20))
+
+create table bills(bill_id integer, customer varchar(255),toy_id integer, quantity integer, discount integer, total_amount number, bdate date)
+
+alter table toys add constraint toy_pk primary key(toy_id)
+alter table age_category add constraint age_pk primary key(age_code)
+alter table bills add constraint bill_pk primary key(bill_id)
+
+alter table toys add constraint toy_fk foreign key(age_code) references age_category
+
+alter table bills add constraint bill_fk foreign key(toy_id) references toys
+
+select * from user_constraints
+
