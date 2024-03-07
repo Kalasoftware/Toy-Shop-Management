@@ -22,21 +22,25 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ToysToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToysHavingStockLessThan10ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ADDUPDATEDELETEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BillsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalesOfLastWeekToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HeroProductOfMonthToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.ADDUPDATEDELETEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ADDUPDATEDELTEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.closebtn = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 16.0!)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToysToolStripMenuItem, Me.AgeToolStripMenuItem, Me.BillsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
@@ -47,6 +51,7 @@ Partial Class Form1
         '
         'ToysToolStripMenuItem
         '
+        Me.ToysToolStripMenuItem.BackColor = System.Drawing.Color.Lime
         Me.ToysToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToysHavingStockLessThan10ToolStripMenuItem, Me.ADDUPDATEDELETEToolStripMenuItem})
         Me.ToysToolStripMenuItem.Name = "ToysToolStripMenuItem"
         Me.ToysToolStripMenuItem.Size = New System.Drawing.Size(74, 34)
@@ -58,8 +63,15 @@ Partial Class Form1
         Me.ToysHavingStockLessThan10ToolStripMenuItem.Size = New System.Drawing.Size(385, 34)
         Me.ToysHavingStockLessThan10ToolStripMenuItem.Text = "Toys Having Stock Less than 10"
         '
+        'ADDUPDATEDELETEToolStripMenuItem
+        '
+        Me.ADDUPDATEDELETEToolStripMenuItem.Name = "ADDUPDATEDELETEToolStripMenuItem"
+        Me.ADDUPDATEDELETEToolStripMenuItem.Size = New System.Drawing.Size(385, 34)
+        Me.ADDUPDATEDELETEToolStripMenuItem.Text = "ADD / UPDATE / DELETE"
+        '
         'AgeToolStripMenuItem
         '
+        Me.AgeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ADDUPDATEDELTEToolStripMenuItem})
         Me.AgeToolStripMenuItem.Name = "AgeToolStripMenuItem"
         Me.AgeToolStripMenuItem.Size = New System.Drawing.Size(64, 34)
         Me.AgeToolStripMenuItem.Text = "Age"
@@ -85,23 +97,44 @@ Partial Class Form1
         '
         'DataGridView1
         '
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(577, 316)
+        Me.DataGridView1.Location = New System.Drawing.Point(86, 86)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(811, 482)
         Me.DataGridView1.TabIndex = 1
         '
-        'ADDUPDATEDELETEToolStripMenuItem
+        'ADDUPDATEDELTEToolStripMenuItem
         '
-        Me.ADDUPDATEDELETEToolStripMenuItem.Name = "ADDUPDATEDELETEToolStripMenuItem"
-        Me.ADDUPDATEDELETEToolStripMenuItem.Size = New System.Drawing.Size(385, 34)
-        Me.ADDUPDATEDELETEToolStripMenuItem.Text = "ADD / UPDATE / DELETE"
+        Me.ADDUPDATEDELTEToolStripMenuItem.Name = "ADDUPDATEDELTEToolStripMenuItem"
+        Me.ADDUPDATEDELTEToolStripMenuItem.Size = New System.Drawing.Size(281, 34)
+        Me.ADDUPDATEDELTEToolStripMenuItem.Text = "ADD/UPDATE/DELTE"
+        '
+        'closebtn
+        '
+        Me.closebtn.BackColor = System.Drawing.Color.Red
+        Me.closebtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.closebtn.Location = New System.Drawing.Point(822, 57)
+        Me.closebtn.Name = "closebtn"
+        Me.closebtn.Size = New System.Drawing.Size(75, 23)
+        Me.closebtn.TabIndex = 2
+        Me.closebtn.Text = "EXIT"
+        Me.closebtn.UseVisualStyleBackColor = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1277, 603)
+        Me.Controls.Add(Me.closebtn)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -124,4 +157,6 @@ Partial Class Form1
     Friend WithEvents SalesOfLastWeekToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HeroProductOfMonthToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ADDUPDATEDELETEToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ADDUPDATEDELTEToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents closebtn As Button
 End Class

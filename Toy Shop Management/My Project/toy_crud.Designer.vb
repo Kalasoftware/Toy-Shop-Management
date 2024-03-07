@@ -23,7 +23,6 @@ Partial Class toy_crud
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.descbox = New System.Windows.Forms.RichTextBox()
@@ -44,19 +43,12 @@ Partial Class toy_crud
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.backbtn = New System.Windows.Forms.Button()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(354, 40)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 46
-        Me.DataGridView1.Size = New System.Drawing.Size(525, 354)
-        Me.DataGridView1.TabIndex = 0
         '
         'TextBox1
         '
@@ -223,11 +215,30 @@ Partial Class toy_crud
         Me.PictureBox1.TabIndex = 18
         Me.PictureBox1.TabStop = False
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(354, 40)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(519, 342)
+        Me.DataGridView1.TabIndex = 19
+        '
+        'backbtn
+        '
+        Me.backbtn.Location = New System.Drawing.Point(957, 286)
+        Me.backbtn.Name = "backbtn"
+        Me.backbtn.Size = New System.Drawing.Size(75, 23)
+        Me.backbtn.TabIndex = 20
+        Me.backbtn.Text = "back"
+        Me.backbtn.UseVisualStyleBackColor = True
+        '
         'toy_crud
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1289, 529)
+        Me.Controls.Add(Me.backbtn)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.agecodebox)
@@ -246,18 +257,15 @@ Partial Class toy_crud
         Me.Controls.Add(Me.descbox)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Name = "toy_crud"
         Me.Text = "toy_crud"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents descbox As RichTextBox
@@ -278,4 +286,6 @@ Partial Class toy_crud
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents backbtn As Button
 End Class
