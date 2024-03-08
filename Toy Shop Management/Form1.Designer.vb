@@ -28,12 +28,14 @@ Partial Class Form1
         Me.ToysHavingStockLessThan10ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ADDUPDATEDELETEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ADDUPDATEDELTEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BillsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalesOfLastWeekToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HeroProductOfMonthToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.ADDUPDATEDELTEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.closebtn = New System.Windows.Forms.Button()
+        Me.GENERATEBILLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -76,9 +78,15 @@ Partial Class Form1
         Me.AgeToolStripMenuItem.Size = New System.Drawing.Size(64, 34)
         Me.AgeToolStripMenuItem.Text = "Age"
         '
+        'ADDUPDATEDELTEToolStripMenuItem
+        '
+        Me.ADDUPDATEDELTEToolStripMenuItem.Name = "ADDUPDATEDELTEToolStripMenuItem"
+        Me.ADDUPDATEDELTEToolStripMenuItem.Size = New System.Drawing.Size(281, 34)
+        Me.ADDUPDATEDELTEToolStripMenuItem.Text = "ADD/UPDATE/DELTE"
+        '
         'BillsToolStripMenuItem
         '
-        Me.BillsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalesOfLastWeekToolStripMenuItem, Me.HeroProductOfMonthToolStripMenuItem})
+        Me.BillsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GENERATEBILLToolStripMenuItem, Me.SalesOfLastWeekToolStripMenuItem, Me.HeroProductOfMonthToolStripMenuItem})
         Me.BillsToolStripMenuItem.Name = "BillsToolStripMenuItem"
         Me.BillsToolStripMenuItem.Size = New System.Drawing.Size(62, 34)
         Me.BillsToolStripMenuItem.Text = "Bills"
@@ -111,12 +119,6 @@ Partial Class Form1
         Me.DataGridView1.Size = New System.Drawing.Size(811, 482)
         Me.DataGridView1.TabIndex = 1
         '
-        'ADDUPDATEDELTEToolStripMenuItem
-        '
-        Me.ADDUPDATEDELTEToolStripMenuItem.Name = "ADDUPDATEDELTEToolStripMenuItem"
-        Me.ADDUPDATEDELTEToolStripMenuItem.Size = New System.Drawing.Size(281, 34)
-        Me.ADDUPDATEDELTEToolStripMenuItem.Text = "ADD/UPDATE/DELTE"
-        '
         'closebtn
         '
         Me.closebtn.BackColor = System.Drawing.Color.Red
@@ -128,12 +130,28 @@ Partial Class Form1
         Me.closebtn.Text = "EXIT"
         Me.closebtn.UseVisualStyleBackColor = False
         '
+        'GENERATEBILLToolStripMenuItem
+        '
+        Me.GENERATEBILLToolStripMenuItem.Name = "GENERATEBILLToolStripMenuItem"
+        Me.GENERATEBILLToolStripMenuItem.Size = New System.Drawing.Size(312, 34)
+        Me.GENERATEBILLToolStripMenuItem.Text = "GENERATE BILL"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(5, 86)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "refresh"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1277, 603)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.closebtn)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.MenuStrip1)
@@ -159,4 +177,6 @@ Partial Class Form1
     Friend WithEvents ADDUPDATEDELETEToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ADDUPDATEDELTEToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents closebtn As Button
+    Friend WithEvents GENERATEBILLToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Button1 As Button
 End Class

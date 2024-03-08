@@ -45,6 +45,7 @@ Partial Class toy_crud
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.backbtn = New System.Windows.Forms.Button()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -232,11 +233,23 @@ Partial Class toy_crud
         Me.backbtn.Text = "back"
         Me.backbtn.UseVisualStyleBackColor = True
         '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.LinkLabel1.Location = New System.Drawing.Point(278, 214)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(37, 17)
+        Me.LinkLabel1.TabIndex = 21
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Add "
+        '
         'toy_crud
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1289, 529)
+        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.backbtn)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.PictureBox1)
@@ -288,4 +301,5 @@ Partial Class toy_crud
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents backbtn As Button
+    Friend WithEvents LinkLabel1 As LinkLabel
 End Class

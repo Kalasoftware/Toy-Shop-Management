@@ -172,6 +172,7 @@ Public Class toy_crud
     Private Sub backbtn_Click(sender As Object, e As EventArgs) Handles backbtn.Click
         Me.Hide()
         Form1.Show()
+        Me.Dispose()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -191,5 +192,9 @@ Public Class toy_crud
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        age_in.Show()
     End Sub
 End Class
