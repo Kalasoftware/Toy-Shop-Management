@@ -4,6 +4,7 @@ Imports System.Security.Cryptography
 Public Class gen_bill
     Dim price As Decimal
     Dim total_amout As Decimal
+    Dim total_amount As Decimal
     Dim connection As OleDbConnection
     Dim ds As DataSet
     Private Sub gen_bill_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -32,7 +33,7 @@ Public Class gen_bill
             cmd.Parameters.AddWithValue("?", (toycombo.SelectedValue))
 
             cmd.Parameters.AddWithValue("?", (qin.Value))
-            cmd.Parameters.AddWithValue("?", CInt(din.Text))
+            cmd.Parameters.AddWithValue("?", din.Value)
             cmd.Parameters.AddWithValue("?", CInt(amoutin.Text))
             cmd.Parameters.AddWithValue("?", datein.Value.ToString("yyyy-MM-dd"))
             Dim valuein = cmd.ExecuteNonQuery
@@ -52,7 +53,7 @@ Public Class gen_bill
         csutomerlbl.Text = cin.Text
         toy_idlbl.Text = toycombo.SelectedValue
         quanlbl.Text = qin.Value
-        disclbl.Text = CInt(din.Text)
+        disclbl.Text = din.Value
         amountlbl.Text = amoutin.Text
         datelbl.Text = datein.Value.ToString("yyyy-MM-dd")
     End Sub
@@ -91,19 +92,18 @@ Public Class gen_bill
         End Try
     End Sub
 
-    Private Sub din_ValueChanged(sender As Object, e As EventArgs)
-        Dim d As Decimal = Convert.ToDecimal(din.Text) / 100
 
-        total_amout -= qin.Value * price * d
-        amoutin.Text = Convert.ToDecimal(total_amout)
 
-    End Sub
 
-    Private Sub amoutin_TextChanged(sender As Object, e As EventArgs) Handles amoutin.TextChanged
 
-    End Sub
+    Private Sub din_ValueChanged(sender As Object, e As EventArgs) Handles din.ValueChanged
+        Try
+            Dim d As Decimal = Convert.ToDecimal(din.Value) / 100
 
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles din.TextChanged
+            total_amout -= total_amout * d
+            amoutin.Text = Convert.ToDecimal(total_amout)
+        Catch ex As Exception
 
+        End Try
     End Sub
 End Class

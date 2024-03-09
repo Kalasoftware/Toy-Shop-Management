@@ -36,6 +36,7 @@ Partial Class gen_bill
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.datein = New System.Windows.Forms.DateTimePicker()
+        Me.din = New System.Windows.Forms.NumericUpDown()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -56,9 +57,9 @@ Partial Class gen_bill
         Me.Label16 = New System.Windows.Forms.Label()
         Me.resultlbl = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.din = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.qin, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.din, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -212,6 +213,14 @@ Partial Class gen_bill
         Me.datein.Name = "datein"
         Me.datein.Size = New System.Drawing.Size(188, 20)
         Me.datein.TabIndex = 12
+        '
+        'din
+        '
+        Me.din.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.din.Location = New System.Drawing.Point(191, 148)
+        Me.din.Name = "din"
+        Me.din.Size = New System.Drawing.Size(112, 23)
+        Me.din.TabIndex = 19
         '
         'Label5
         '
@@ -437,13 +446,6 @@ Partial Class gen_bill
         Me.Button2.Text = "Back"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'din
-        '
-        Me.din.Location = New System.Drawing.Point(191, 148)
-        Me.din.Name = "din"
-        Me.din.Size = New System.Drawing.Size(100, 20)
-        Me.din.TabIndex = 19
-        '
         'gen_bill
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -461,6 +463,7 @@ Partial Class gen_bill
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         CType(Me.qin, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.din, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
         Me.ResumeLayout(False)
@@ -502,5 +505,5 @@ Partial Class gen_bill
     Friend WithEvents resultlbl As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents toycombo As ComboBox
-    Friend WithEvents din As TextBox
+    Friend WithEvents din As NumericUpDown
 End Class
