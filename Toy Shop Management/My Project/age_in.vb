@@ -25,7 +25,7 @@ Public Class age_in
         Try
             connection.Open()
             Dim cmd As New OleDbCommand("insert into age_category values(?,?)", connection)
-            cmd.Parameters.AddWithValue("?", NumericUpDown1.Value)
+            cmd.Parameters.AddWithValue("?", CInt(TextBox2.Text))
             cmd.Parameters.AddWithValue("?", TextBox1.Text)
             Dim rowins = cmd.ExecuteNonQuery
             If (rowins >= 1) Then
@@ -38,4 +38,54 @@ Public Class age_in
         End Try
 
     End Sub
+
+    Private Sub ageview_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles ageview.CellContentClick
+
+    End Sub
+
+    Private Sub ageview_SelectionChanged(sender As Object, e As EventArgs) Handles ageview.SelectionChanged
+        Try
+            TextBox2.Text = ageview.SelectedRows(0).Cells(0).Value
+            TextBox1.Text = ageview.SelectedRows(0).Cells(1).Value
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub updatebtn_Click(sender As Object, e As EventArgs) Handles updatebtn.Click
+        Try
+            connection.Open()
+            Dim cmd As New OleDbCommand("update age_category set years=? where age_code=?", connection)
+
+            cmd.Parameters.AddWithValue("?", TextBox1.Text)
+            cmd.Parameters.AddWithValue("?", CInt(TextBox2.Text))
+            Dim effrow = cmd.ExecuteNonQuery
+
+            If (effrow >= 1) Then
+                fillage()
+                connection.Close()
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub delbtn_Click(sender As Object, e As EventArgs) Handles delbtn.Click
+        Try
+            connection.Open()
+            Dim cmd As New OleDbCommand("delete from age_category where age_code=?", connection)
+            cmd.Parameters.AddWithValue("?", CInt(TextBox2.Text))
+            Dim effrow = cmd.ExecuteNonQuery
+            If (effrow >= 1) Then
+                fillage()
+                connection.Close()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+
 End Class

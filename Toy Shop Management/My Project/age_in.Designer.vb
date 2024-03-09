@@ -31,6 +31,7 @@ Partial Class age_in
         Me.updatebtn = New System.Windows.Forms.Button()
         Me.delbtn = New System.Windows.Forms.Button()
         Me.backbtn = New System.Windows.Forms.Button()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         CType(Me.ageview, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -54,7 +55,7 @@ Partial Class age_in
         'NumericUpDown1
         '
         Me.NumericUpDown1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
-        Me.NumericUpDown1.Location = New System.Drawing.Point(137, 101)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(137, 59)
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(120, 31)
         Me.NumericUpDown1.TabIndex = 2
@@ -115,11 +116,20 @@ Partial Class age_in
         Me.backbtn.Text = "Back"
         Me.backbtn.UseVisualStyleBackColor = True
         '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
+        Me.TextBox2.Location = New System.Drawing.Point(137, 97)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 31)
+        Me.TextBox2.TabIndex = 9
+        '
         'age_in
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.backbtn)
         Me.Controls.Add(Me.delbtn)
         Me.Controls.Add(Me.updatebtn)
@@ -147,4 +157,5 @@ Partial Class age_in
     Friend WithEvents updatebtn As Button
     Friend WithEvents delbtn As Button
     Friend WithEvents backbtn As Button
+    Friend WithEvents TextBox2 As TextBox
 End Class

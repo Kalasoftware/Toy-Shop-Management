@@ -52,4 +52,8 @@ Public Class Form1
     Private Sub ToysHavingStockLessThan10ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToysHavingStockLessThan10ToolStripMenuItem.Click
         less_stock.show()
     End Sub
+
+    Private Sub HeroProductOfMonthToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HeroProductOfMonthToolStripMenuItem.Click
+        phero.show()
+    End Sub
 End Class
