@@ -23,23 +23,30 @@ Partial Class gen_bill
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.cin = New System.Windows.Forms.TextBox()
-        Me.qin = New System.Windows.Forms.NumericUpDown()
-        Me.din = New System.Windows.Forms.NumericUpDown()
+        Me.toycombo = New System.Windows.Forms.ComboBox()
         Me.amoutin = New System.Windows.Forms.TextBox()
+        Me.qin = New System.Windows.Forms.NumericUpDown()
+        Me.cin = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.datein = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.datelbl = New System.Windows.Forms.Label()
+        Me.amountlbl = New System.Windows.Forms.Label()
+        Me.disclbl = New System.Windows.Forms.Label()
+        Me.quanlbl = New System.Windows.Forms.Label()
+        Me.toy_idlbl = New System.Windows.Forms.Label()
+        Me.csutomerlbl = New System.Windows.Forms.Label()
+        Me.billbl = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -47,19 +54,11 @@ Partial Class gen_bill
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.billbl = New System.Windows.Forms.Label()
-        Me.csutomerlbl = New System.Windows.Forms.Label()
-        Me.toy_idlbl = New System.Windows.Forms.Label()
-        Me.quanlbl = New System.Windows.Forms.Label()
-        Me.disclbl = New System.Windows.Forms.Label()
-        Me.amountlbl = New System.Windows.Forms.Label()
-        Me.datelbl = New System.Windows.Forms.Label()
         Me.resultlbl = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.toycombo = New System.Windows.Forms.ComboBox()
+        Me.din = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.qin, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.din, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -71,7 +70,6 @@ Partial Class gen_bill
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.toycombo, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.amoutin, 1, 5)
-        Me.TableLayoutPanel1.Controls.Add(Me.din, 1, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.qin, 1, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.cin, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox1, 1, 0)
@@ -83,6 +81,7 @@ Partial Class gen_bill
         Me.TableLayoutPanel1.Controls.Add(Me.Label8, 0, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.datein, 1, 6)
+        Me.TableLayoutPanel1.Controls.Add(Me.din, 1, 4)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(62, 63)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 8
@@ -97,6 +96,46 @@ Partial Class gen_bill
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(383, 256)
         Me.TableLayoutPanel1.TabIndex = 0
         '
+        'toycombo
+        '
+        Me.toycombo.FormattingEnabled = True
+        Me.toycombo.Location = New System.Drawing.Point(191, 76)
+        Me.toycombo.Name = "toycombo"
+        Me.toycombo.Size = New System.Drawing.Size(121, 21)
+        Me.toycombo.TabIndex = 18
+        '
+        'amoutin
+        '
+        Me.amoutin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.amoutin.Location = New System.Drawing.Point(191, 184)
+        Me.amoutin.Name = "amoutin"
+        Me.amoutin.Size = New System.Drawing.Size(100, 23)
+        Me.amoutin.TabIndex = 11
+        '
+        'qin
+        '
+        Me.qin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.qin.Location = New System.Drawing.Point(191, 112)
+        Me.qin.Name = "qin"
+        Me.qin.Size = New System.Drawing.Size(112, 23)
+        Me.qin.TabIndex = 9
+        '
+        'cin
+        '
+        Me.cin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.cin.Location = New System.Drawing.Point(191, 40)
+        Me.cin.Name = "cin"
+        Me.cin.Size = New System.Drawing.Size(100, 23)
+        Me.cin.TabIndex = 8
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.TextBox1.Location = New System.Drawing.Point(191, 4)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 23)
+        Me.TextBox1.TabIndex = 1
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -106,36 +145,6 @@ Partial Class gen_bill
         Me.Label1.Size = New System.Drawing.Size(53, 17)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "BILL ID"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
-        Me.Label2.Location = New System.Drawing.Point(4, 37)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(68, 17)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Customer"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
-        Me.Label3.Location = New System.Drawing.Point(4, 109)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(61, 17)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Quantity"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
-        Me.Label4.Location = New System.Drawing.Point(4, 73)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(49, 17)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Toy iD"
         '
         'Label6
         '
@@ -147,6 +156,16 @@ Partial Class gen_bill
         Me.Label6.TabIndex = 7
         Me.Label6.Text = "Bill Date"
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.Label2.Location = New System.Drawing.Point(4, 37)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(68, 17)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Customer"
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -156,6 +175,16 @@ Partial Class gen_bill
         Me.Label7.Size = New System.Drawing.Size(92, 17)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Total Amount"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.Label4.Location = New System.Drawing.Point(4, 73)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(73, 17)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Toy Name"
         '
         'Label8
         '
@@ -167,45 +196,15 @@ Partial Class gen_bill
         Me.Label8.TabIndex = 5
         Me.Label8.Text = "Discount"
         '
-        'TextBox1
+        'Label3
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
-        Me.TextBox1.Location = New System.Drawing.Point(191, 4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox1.TabIndex = 1
-        '
-        'cin
-        '
-        Me.cin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
-        Me.cin.Location = New System.Drawing.Point(191, 40)
-        Me.cin.Name = "cin"
-        Me.cin.Size = New System.Drawing.Size(100, 23)
-        Me.cin.TabIndex = 8
-        '
-        'qin
-        '
-        Me.qin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
-        Me.qin.Location = New System.Drawing.Point(191, 112)
-        Me.qin.Name = "qin"
-        Me.qin.Size = New System.Drawing.Size(112, 23)
-        Me.qin.TabIndex = 9
-        '
-        'din
-        '
-        Me.din.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
-        Me.din.Location = New System.Drawing.Point(191, 148)
-        Me.din.Name = "din"
-        Me.din.Size = New System.Drawing.Size(112, 23)
-        Me.din.TabIndex = 10
-        '
-        'amoutin
-        '
-        Me.amoutin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
-        Me.amoutin.Location = New System.Drawing.Point(191, 184)
-        Me.amoutin.Name = "amoutin"
-        Me.amoutin.Size = New System.Drawing.Size(100, 23)
-        Me.amoutin.TabIndex = 11
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.Label3.Location = New System.Drawing.Point(4, 109)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(61, 17)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "Quantity"
         '
         'datein
         '
@@ -278,6 +277,76 @@ Partial Class gen_bill
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(383, 256)
         Me.TableLayoutPanel2.TabIndex = 14
         '
+        'datelbl
+        '
+        Me.datelbl.AutoSize = True
+        Me.datelbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.datelbl.Location = New System.Drawing.Point(191, 217)
+        Me.datelbl.Name = "datelbl"
+        Me.datelbl.Size = New System.Drawing.Size(82, 17)
+        Me.datelbl.TabIndex = 22
+        Me.datelbl.Text = "yyyy/mm/dd"
+        '
+        'amountlbl
+        '
+        Me.amountlbl.AutoSize = True
+        Me.amountlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.amountlbl.Location = New System.Drawing.Point(191, 181)
+        Me.amountlbl.Name = "amountlbl"
+        Me.amountlbl.Size = New System.Drawing.Size(16, 17)
+        Me.amountlbl.TabIndex = 21
+        Me.amountlbl.Text = "0"
+        '
+        'disclbl
+        '
+        Me.disclbl.AutoSize = True
+        Me.disclbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.disclbl.Location = New System.Drawing.Point(191, 145)
+        Me.disclbl.Name = "disclbl"
+        Me.disclbl.Size = New System.Drawing.Size(16, 17)
+        Me.disclbl.TabIndex = 20
+        Me.disclbl.Text = "0"
+        '
+        'quanlbl
+        '
+        Me.quanlbl.AutoSize = True
+        Me.quanlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.quanlbl.Location = New System.Drawing.Point(191, 109)
+        Me.quanlbl.Name = "quanlbl"
+        Me.quanlbl.Size = New System.Drawing.Size(16, 17)
+        Me.quanlbl.TabIndex = 19
+        Me.quanlbl.Text = "0"
+        '
+        'toy_idlbl
+        '
+        Me.toy_idlbl.AutoSize = True
+        Me.toy_idlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.toy_idlbl.Location = New System.Drawing.Point(191, 73)
+        Me.toy_idlbl.Name = "toy_idlbl"
+        Me.toy_idlbl.Size = New System.Drawing.Size(16, 17)
+        Me.toy_idlbl.TabIndex = 18
+        Me.toy_idlbl.Text = "0"
+        '
+        'csutomerlbl
+        '
+        Me.csutomerlbl.AutoSize = True
+        Me.csutomerlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.csutomerlbl.Location = New System.Drawing.Point(191, 37)
+        Me.csutomerlbl.Name = "csutomerlbl"
+        Me.csutomerlbl.Size = New System.Drawing.Size(16, 17)
+        Me.csutomerlbl.TabIndex = 17
+        Me.csutomerlbl.Text = "0"
+        '
+        'billbl
+        '
+        Me.billbl.AutoSize = True
+        Me.billbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.billbl.Location = New System.Drawing.Point(191, 1)
+        Me.billbl.Name = "billbl"
+        Me.billbl.Size = New System.Drawing.Size(16, 17)
+        Me.billbl.TabIndex = 16
+        Me.billbl.Text = "0"
+        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -348,76 +417,6 @@ Partial Class gen_bill
         Me.Label16.TabIndex = 4
         Me.Label16.Text = "Quantity"
         '
-        'billbl
-        '
-        Me.billbl.AutoSize = True
-        Me.billbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
-        Me.billbl.Location = New System.Drawing.Point(191, 1)
-        Me.billbl.Name = "billbl"
-        Me.billbl.Size = New System.Drawing.Size(16, 17)
-        Me.billbl.TabIndex = 16
-        Me.billbl.Text = "0"
-        '
-        'csutomerlbl
-        '
-        Me.csutomerlbl.AutoSize = True
-        Me.csutomerlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
-        Me.csutomerlbl.Location = New System.Drawing.Point(191, 37)
-        Me.csutomerlbl.Name = "csutomerlbl"
-        Me.csutomerlbl.Size = New System.Drawing.Size(16, 17)
-        Me.csutomerlbl.TabIndex = 17
-        Me.csutomerlbl.Text = "0"
-        '
-        'toy_idlbl
-        '
-        Me.toy_idlbl.AutoSize = True
-        Me.toy_idlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
-        Me.toy_idlbl.Location = New System.Drawing.Point(191, 73)
-        Me.toy_idlbl.Name = "toy_idlbl"
-        Me.toy_idlbl.Size = New System.Drawing.Size(16, 17)
-        Me.toy_idlbl.TabIndex = 18
-        Me.toy_idlbl.Text = "0"
-        '
-        'quanlbl
-        '
-        Me.quanlbl.AutoSize = True
-        Me.quanlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
-        Me.quanlbl.Location = New System.Drawing.Point(191, 109)
-        Me.quanlbl.Name = "quanlbl"
-        Me.quanlbl.Size = New System.Drawing.Size(16, 17)
-        Me.quanlbl.TabIndex = 19
-        Me.quanlbl.Text = "0"
-        '
-        'disclbl
-        '
-        Me.disclbl.AutoSize = True
-        Me.disclbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
-        Me.disclbl.Location = New System.Drawing.Point(191, 145)
-        Me.disclbl.Name = "disclbl"
-        Me.disclbl.Size = New System.Drawing.Size(16, 17)
-        Me.disclbl.TabIndex = 20
-        Me.disclbl.Text = "0"
-        '
-        'amountlbl
-        '
-        Me.amountlbl.AutoSize = True
-        Me.amountlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
-        Me.amountlbl.Location = New System.Drawing.Point(191, 181)
-        Me.amountlbl.Name = "amountlbl"
-        Me.amountlbl.Size = New System.Drawing.Size(16, 17)
-        Me.amountlbl.TabIndex = 21
-        Me.amountlbl.Text = "0"
-        '
-        'datelbl
-        '
-        Me.datelbl.AutoSize = True
-        Me.datelbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
-        Me.datelbl.Location = New System.Drawing.Point(191, 217)
-        Me.datelbl.Name = "datelbl"
-        Me.datelbl.Size = New System.Drawing.Size(82, 17)
-        Me.datelbl.TabIndex = 22
-        Me.datelbl.Text = "yyyy/mm/dd"
-        '
         'resultlbl
         '
         Me.resultlbl.AutoSize = True
@@ -438,13 +437,12 @@ Partial Class gen_bill
         Me.Button2.Text = "Back"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'toycombo
+        'din
         '
-        Me.toycombo.FormattingEnabled = True
-        Me.toycombo.Location = New System.Drawing.Point(191, 76)
-        Me.toycombo.Name = "toycombo"
-        Me.toycombo.Size = New System.Drawing.Size(121, 21)
-        Me.toycombo.TabIndex = 18
+        Me.din.Location = New System.Drawing.Point(191, 148)
+        Me.din.Name = "din"
+        Me.din.Size = New System.Drawing.Size(100, 20)
+        Me.din.TabIndex = 19
         '
         'gen_bill
         '
@@ -463,7 +461,6 @@ Partial Class gen_bill
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         CType(Me.qin, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.din, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
         Me.ResumeLayout(False)
@@ -480,7 +477,6 @@ Partial Class gen_bill
     Friend WithEvents Label8 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents amoutin As TextBox
-    Friend WithEvents din As NumericUpDown
     Friend WithEvents qin As NumericUpDown
     Friend WithEvents cin As TextBox
     Friend WithEvents TextBox1 As TextBox
@@ -506,4 +502,5 @@ Partial Class gen_bill
     Friend WithEvents resultlbl As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents toycombo As ComboBox
+    Friend WithEvents din As TextBox
 End Class

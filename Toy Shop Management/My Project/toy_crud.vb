@@ -18,7 +18,9 @@ Public Class toy_crud
         fillagecode()
 
 
+
     End Sub
+
 
     Private Sub fillagecode()
         ds = New DataSet
@@ -27,7 +29,7 @@ Public Class toy_crud
         agecodebox.DataSource = ds.Tables("age_category")
         agecodebox.DisplayMember = "years"
         agecodebox.ValueMember = "age_code"
-
+        DataGridView1.DefaultCellStyle.Font = New Font("Arial", 16)
 
     End Sub
 
@@ -46,6 +48,8 @@ Public Class toy_crud
 
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch
             DataGridView1.Columns.Add(imageColumn)
+            DataGridView1.Columns("imageColumn").Width = 240
+
         End If
 
         Try
@@ -77,17 +81,18 @@ Public Class toy_crud
         Try
             connection.Open()
             Dim qry As String
-            qry = "insert into toys values(?,?,?,?,?,?)"
+            qry = "insert into toys values(?,?,?,?,?,?,?)"
             Dim command As New OleDbCommand(qry, connection)
 
             command.Parameters.AddWithValue("?", CInt(TextBox1.Text))
             command.Parameters.AddWithValue("?", TextBox2.Text)
             command.Parameters.AddWithValue("?", descbox.Text)
             command.Parameters.AddWithValue("?", agecodebox.SelectedValue)
-            NumericUpDown1.Value = agecodebox.SelectedValue
-            'command.Parameters.AddWithValue("?", CInt(NumericUpDown1.Value))
+
+
             command.Parameters.AddWithValue("?", TextBox3.Text)
             command.Parameters.AddWithValue("?", CInt(TextBox4.Text))
+            command.Parameters.AddWithValue("?", CInt(TextBox5.Text))
 
 
 
@@ -108,6 +113,9 @@ Public Class toy_crud
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
+            OpenFileDialog1.InitialDirectory = "C:\"
+            OpenFileDialog1.Title = "Open an image file"
+            OpenFileDialog1.Filter = "(image files|*jpg,*png"
             Dim imagePath As String = OpenFileDialog1.FileName
             PictureBox1.Image = Image.FromFile(imagePath)
             TextBox3.Text = imagePath
@@ -125,17 +133,16 @@ Public Class toy_crud
         Try
             connection.Open()
             Dim qry As String
-            qry = "update toys set toy_name=?,descr=?,age_code=?,stock=? where toy_id=? "
+            qry = "update toys set toy_name=?,descr=?,age_code=?,stock=?,price_per_item where toy_id=? "
             Dim command As New OleDbCommand(qry, connection)
 
 
             command.Parameters.AddWithValue("?", TextBox2.Text)
             command.Parameters.AddWithValue("?", descbox.Text)
             command.Parameters.AddWithValue("?", agecodebox.SelectedValue)
-            NumericUpDown1.Value = agecodebox.SelectedValue
-            'command.Parameters.AddWithValue("?", CInt(NumericUpDown1.Value))
-            'command.Parameters.AddWithValue("?", TextBox3.Text)
+
             command.Parameters.AddWithValue("?", CInt(TextBox4.Text))
+            command.Parameters.AddWithValue("?", CInt(TextBox5.Text))
             command.Parameters.AddWithValue("?", CInt(TextBox1.Text))
 
 
@@ -161,7 +168,7 @@ Public Class toy_crud
             TextBox2.Text = DataGridView1.SelectedRows(0).Cells(1).Value
             descbox.Text = DataGridView1.SelectedRows(0).Cells(2).Value
             agecodebox.SelectedValue = DataGridView1.SelectedRows(0).Cells(3).Value
-
+            TextBox5.Text = DataGridView1.SelectedRows(0).Cells(4).Value
             TextBox4.Text = DataGridView1.SelectedRows(0).Cells(5).Value
         Catch ex As Exception
 
@@ -185,7 +192,7 @@ Public Class toy_crud
             Dim insrow = command.ExecuteNonQuery()
             connection.Close()
             If (insrow >= 1) Then
-                MessageBox.Show("updated bro")
+                MessageBox.Show("deleted bro")
                 filldatagrid()
             End If
 
@@ -196,5 +203,9 @@ Public Class toy_crud
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         age_in.Show()
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
     End Sub
 End Class

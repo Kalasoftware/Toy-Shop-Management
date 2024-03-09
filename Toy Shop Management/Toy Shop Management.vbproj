@@ -103,6 +103,12 @@
     <Compile Include="My Project\gen_bill.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="My Project\less_stock.Designer.vb">
+      <DependentUpon>less_stock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\less_stock.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\gen_bill.resx">
       <DependentUpon>gen_bill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\less_stock.resx">
+      <DependentUpon>less_stock.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

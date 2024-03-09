@@ -30,11 +30,11 @@ Partial Class Form1
         Me.AgeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ADDUPDATEDELTEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BillsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GENERATEBILLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalesOfLastWeekToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HeroProductOfMonthToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.closebtn = New System.Windows.Forms.Button()
-        Me.GENERATEBILLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,6 +91,12 @@ Partial Class Form1
         Me.BillsToolStripMenuItem.Size = New System.Drawing.Size(62, 34)
         Me.BillsToolStripMenuItem.Text = "Bills"
         '
+        'GENERATEBILLToolStripMenuItem
+        '
+        Me.GENERATEBILLToolStripMenuItem.Name = "GENERATEBILLToolStripMenuItem"
+        Me.GENERATEBILLToolStripMenuItem.Size = New System.Drawing.Size(312, 34)
+        Me.GENERATEBILLToolStripMenuItem.Text = "GENERATE BILL"
+        '
         'SalesOfLastWeekToolStripMenuItem
         '
         Me.SalesOfLastWeekToolStripMenuItem.Name = "SalesOfLastWeekToolStripMenuItem"
@@ -129,12 +135,6 @@ Partial Class Form1
         Me.closebtn.TabIndex = 2
         Me.closebtn.Text = "EXIT"
         Me.closebtn.UseVisualStyleBackColor = False
-        '
-        'GENERATEBILLToolStripMenuItem
-        '
-        Me.GENERATEBILLToolStripMenuItem.Name = "GENERATEBILLToolStripMenuItem"
-        Me.GENERATEBILLToolStripMenuItem.Size = New System.Drawing.Size(312, 34)
-        Me.GENERATEBILLToolStripMenuItem.Text = "GENERATE BILL"
         '
         'Button1
         '

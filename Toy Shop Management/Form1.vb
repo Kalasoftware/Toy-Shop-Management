@@ -48,4 +48,8 @@ Public Class Form1
     Private Sub SalesOfLastWeekToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalesOfLastWeekToolStripMenuItem.Click
         sales_q.show()
     End Sub
+
+    Private Sub ToysHavingStockLessThan10ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToysHavingStockLessThan10ToolStripMenuItem.Click
+        less_stock.show()
+    End Sub
 End Class

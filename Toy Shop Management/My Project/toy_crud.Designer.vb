@@ -26,7 +26,6 @@ Partial Class toy_crud
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.descbox = New System.Windows.Forms.RichTextBox()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -46,7 +45,8 @@ Partial Class toy_crud
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.backbtn = New System.Windows.Forms.Button()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pricebx = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -60,7 +60,7 @@ Partial Class toy_crud
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(151, 80)
+        Me.TextBox2.Location = New System.Drawing.Point(151, 79)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(100, 20)
         Me.TextBox2.TabIndex = 2
@@ -72,13 +72,6 @@ Partial Class toy_crud
         Me.descbox.Size = New System.Drawing.Size(100, 96)
         Me.descbox.TabIndex = 3
         Me.descbox.Text = ""
-        '
-        'NumericUpDown1
-        '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(151, 238)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(120, 20)
-        Me.NumericUpDown1.TabIndex = 4
         '
         'TextBox3
         '
@@ -244,11 +237,30 @@ Partial Class toy_crud
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Add "
         '
+        'pricebx
+        '
+        Me.pricebx.AutoSize = True
+        Me.pricebx.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.pricebx.Location = New System.Drawing.Point(46, 346)
+        Me.pricebx.Name = "pricebx"
+        Me.pricebx.Size = New System.Drawing.Size(58, 24)
+        Me.pricebx.TabIndex = 23
+        Me.pricebx.Text = "Price "
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(151, 346)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox5.TabIndex = 22
+        '
         'toy_crud
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1289, 529)
+        Me.Controls.Add(Me.pricebx)
+        Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.backbtn)
         Me.Controls.Add(Me.DataGridView1)
@@ -266,13 +278,11 @@ Partial Class toy_crud
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.NumericUpDown1)
         Me.Controls.Add(Me.descbox)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Name = "toy_crud"
         Me.Text = "toy_crud"
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -282,7 +292,6 @@ Partial Class toy_crud
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents descbox As RichTextBox
-    Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label1 As Label
@@ -302,4 +311,6 @@ Partial Class toy_crud
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents backbtn As Button
     Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents pricebx As Label
+    Friend WithEvents TextBox5 As TextBox
 End Class
