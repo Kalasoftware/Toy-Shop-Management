@@ -9,5 +9,5 @@
 <p>2. Now Extract And Open The sln file with visual studio</p>
 
 <h2>🍰 Contribution Guidelines:</h2>
-owner : Anonymous(kaliya)
+
 Till Now No One Has Contributed
