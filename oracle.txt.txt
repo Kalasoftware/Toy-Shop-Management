@@ -1,4 +1,4 @@
-create table toys(toy_id integer,toy_name varchar(40),descr varchar(60),age_code integer, image_path varchar(200),stock integer)
+create table toys(toy_id integer,toy_name varchar(40),descr varchar(60),age_code integer, image_path varchar(200),stock integer,price_per_item number)
 
 
 create table age_category(age_code integer,years varchar(20))
