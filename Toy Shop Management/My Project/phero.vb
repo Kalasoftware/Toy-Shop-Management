@@ -1,11 +1,12 @@
-﻿Imports System.Data.OleDb
+﻿Imports System.Configuration
+Imports System.Data.OleDb
 
 Public Class phero
     Dim connection As OleDbConnection
     Dim ds As DataSet
     Private Sub phero_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim con As New String("data source=localhost;password=int1;user id=int1;provider=oraoledb.Oracle;")
-        connection = New OleDbConnection(con)
+        Dim connection_string As String = ConfigurationManager.ConnectionStrings("c_string").ConnectionString
+        connection = New OleDbConnection(connection_string)
         fillthebox()
 
     End Sub

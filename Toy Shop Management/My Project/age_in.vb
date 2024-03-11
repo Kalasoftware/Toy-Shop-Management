@@ -1,12 +1,13 @@
-﻿Imports System.Data.OleDb
+﻿Imports System.Configuration
+Imports System.Data.OleDb
 Imports System.Net.Configuration
 
 Public Class age_in
     Dim connection As OleDbConnection
     Dim ds As DataSet
     Private Sub age_in_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim con As New String("data source=localhost;password=int1; User id=int1;Provider=ORAOLEDB.Oracle;")
-        connection = New OleDbConnection(con)
+        Dim connection_string As String = ConfigurationManager.ConnectionStrings("c_string").ConnectionString
+        connection = New OleDbConnection(connection_string)
         fillage()
     End Sub
 

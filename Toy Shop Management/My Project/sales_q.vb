@@ -1,10 +1,11 @@
-﻿Imports System.Data.OleDb
+﻿Imports System.Configuration
+Imports System.Data.OleDb
 
 Public Class sales_q
     Dim connection As OleDbConnection
     Dim ds As DataSet
     Private Sub sales_q_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim connection_string As New String("Data Source=localhost;" + "password=int1; User id=int1;" + "Provider=ORAOLEDB.Oracle;")
+        Dim connection_string As String = ConfigurationManager.ConnectionStrings("c_string").ConnectionString
         connection = New OleDbConnection(connection_string)
 
         'Dim startDate As Date = DateTime.Today.AddDays(-DateTime.Today.DayOfWeek - 6)

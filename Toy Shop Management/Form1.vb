@@ -1,4 +1,5 @@
-﻿Imports System.Data.Common
+﻿Imports System.Configuration
+Imports System.Data.Common
 Imports System.Data.OleDb
 Imports System.Windows.Forms.DataVisualization.Charting
 Imports Microsoft.SqlServer.Server
@@ -6,7 +7,7 @@ Public Class Form1
     Dim connection As OleDbConnection
     Dim ds As DataSet
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim connection_string As New String("Data Source=localhost;" + "password=int1; User id=int1;" + "Provider=ORAOLEDB.Oracle;")
+        Dim connection_string As String = ConfigurationManager.ConnectionStrings("c_string").ConnectionString
         connection = New OleDbConnection(connection_string)
         filldatagrid()
 
@@ -56,5 +57,9 @@ Public Class Form1
 
     Private Sub HeroProductOfMonthToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HeroProductOfMonthToolStripMenuItem.Click
         phero.show()
+    End Sub
+
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+
     End Sub
 End Class

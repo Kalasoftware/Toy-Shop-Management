@@ -1,11 +1,12 @@
-﻿Imports System.Data.OleDb
+﻿Imports System.Configuration
+Imports System.Data.OleDb
 
 Public Class less_stock
     Dim con As OleDbConnection
     Dim ds As DataSet
     Private Sub less_stock_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim str As New String("data source=localhost; password=int1; user id=int1; provider=oraoledb.Oracle")
-        con = New OleDbConnection(str)
+        Dim connection_string As String = ConfigurationManager.ConnectionStrings("c_string").ConnectionString
+        con = New OleDbConnection(connection_string)
         fillstock()
     End Sub
 
