@@ -47,6 +47,7 @@ Partial Class toy_crud
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.pricebx = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Button5 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -212,14 +213,14 @@ Partial Class toy_crud
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(354, 40)
+        Me.DataGridView1.Location = New System.Drawing.Point(360, 28)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(519, 342)
+        Me.DataGridView1.Size = New System.Drawing.Size(823, 375)
         Me.DataGridView1.TabIndex = 19
         '
         'backbtn
         '
-        Me.backbtn.Location = New System.Drawing.Point(957, 286)
+        Me.backbtn.Location = New System.Drawing.Point(151, 431)
         Me.backbtn.Name = "backbtn"
         Me.backbtn.Size = New System.Drawing.Size(75, 23)
         Me.backbtn.TabIndex = 20
@@ -254,11 +255,21 @@ Partial Class toy_crud
         Me.TextBox5.Size = New System.Drawing.Size(100, 20)
         Me.TextBox5.TabIndex = 22
         '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(281, 38)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 24
+        Me.Button5.Text = "Refresh"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
         'toy_crud
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1289, 529)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.pricebx)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.LinkLabel1)
@@ -313,4 +324,5 @@ Partial Class toy_crud
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents pricebx As Label
     Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Button5 As Button
 End Class

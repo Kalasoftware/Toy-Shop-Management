@@ -22,9 +22,30 @@ Partial Class phero
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.heroview = New System.Windows.Forms.DataGridView()
+        CType(Me.heroview, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'heroview
+        '
+        Me.heroview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.heroview.Location = New System.Drawing.Point(152, 48)
+        Me.heroview.Name = "heroview"
+        Me.heroview.Size = New System.Drawing.Size(741, 528)
+        Me.heroview.TabIndex = 0
+        '
+        'phero
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1299, 609)
+        Me.Controls.Add(Me.heroview)
+        Me.Name = "phero"
         Me.Text = "phero"
+        CType(Me.heroview, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+
     End Sub
+
+    Friend WithEvents heroview As DataGridView
 End Class

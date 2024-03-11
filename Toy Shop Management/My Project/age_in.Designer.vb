@@ -24,7 +24,6 @@ Partial Class age_in
     Private Sub InitializeComponent()
         Me.ageview = New System.Windows.Forms.DataGridView()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Insertbtn = New System.Windows.Forms.Button()
@@ -33,7 +32,6 @@ Partial Class age_in
         Me.backbtn = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         CType(Me.ageview, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ageview
@@ -51,14 +49,6 @@ Partial Class age_in
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 31)
         Me.TextBox1.TabIndex = 1
-        '
-        'NumericUpDown1
-        '
-        Me.NumericUpDown1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
-        Me.NumericUpDown1.Location = New System.Drawing.Point(137, 59)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(120, 31)
-        Me.NumericUpDown1.TabIndex = 2
         '
         'Label1
         '
@@ -136,13 +126,11 @@ Partial Class age_in
         Me.Controls.Add(Me.Insertbtn)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.NumericUpDown1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.ageview)
         Me.Name = "age_in"
         Me.Text = "age_in"
         CType(Me.ageview, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -150,7 +138,6 @@ Partial Class age_in
 
     Friend WithEvents ageview As DataGridView
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Insertbtn As Button

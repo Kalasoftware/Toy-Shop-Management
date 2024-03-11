@@ -21,6 +21,9 @@ Public Class gen_bill
         toycombo.DataSource = ds.Tables("toys")
         toycombo.DisplayMember = ("toy_name")
         toycombo.ValueMember = ("toy_id")
+        'price dic here '
+
+
 
     End Sub
 

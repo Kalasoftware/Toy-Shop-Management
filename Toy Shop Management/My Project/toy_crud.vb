@@ -10,7 +10,7 @@ Public Class toy_crud
         connection = New OleDbConnection(connection_string)
 
         DataGridView1.RowTemplate.Height = 240
-        Dim columnWidth As Integer = 340 ' Set the desired width for all columns
+        Dim columnWidth As Integer = 340 ' wdith of the column of image 
         For Each col As DataGridViewColumn In DataGridView1.Columns
             col.Width = columnWidth
         Next
@@ -59,7 +59,7 @@ Public Class toy_crud
                     Dim image As Image = Image.FromFile(filename)
                     row.Cells("imageColumn").Value = image
                 Else
-                    MessageBox.Show("no file path exits like this ")
+                    ' shwows the error MessageBox.Show("no file path exits like this ")
                 End If
 
             Next
@@ -101,6 +101,7 @@ Public Class toy_crud
             If (insrow >= 1) Then
                 MessageBox.Show("insert bro")
                 filldatagrid()
+
             End If
 
 
@@ -207,5 +208,9 @@ Public Class toy_crud
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        filldatagrid()
     End Sub
 End Class
