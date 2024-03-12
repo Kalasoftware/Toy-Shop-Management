@@ -1,5 +1,7 @@
 <h1 align="center" id="title">Toy-Shop-Management</h1>
 
+<h1 align="center" id="title">Owner : Sumeeet Patel (credit dedena bhai/girls log )</h1>
+
 <p id="description">Application Made In Visual Basic Dotnet framework For toy shop management</p>
 
 <h2>🛠️ Installation Steps:</h2>
