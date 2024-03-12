@@ -86,10 +86,10 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="My Project\age_in.Designer.vb">
+    <Compile Include="age_in.Designer.vb">
       <DependentUpon>age_in.vb</DependentUpon>
     </Compile>
-    <Compile Include="My Project\age_in.vb">
+    <Compile Include="age_in.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -98,33 +98,33 @@
       <DependentUpon>Application.myapp</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="My Project\gen_bill.Designer.vb">
+    <Compile Include="gen_bill.Designer.vb">
       <DependentUpon>gen_bill.vb</DependentUpon>
     </Compile>
-    <Compile Include="My Project\gen_bill.vb">
+    <Compile Include="gen_bill.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="My Project\less_stock.Designer.vb">
+    <Compile Include="less_stock.Designer.vb">
       <DependentUpon>less_stock.vb</DependentUpon>
     </Compile>
-    <Compile Include="My Project\less_stock.vb">
+    <Compile Include="less_stock.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="My Project\phero.Designer.vb">
+    <Compile Include="phero.Designer.vb">
       <DependentUpon>phero.vb</DependentUpon>
     </Compile>
-    <Compile Include="My Project\phero.vb">
+    <Compile Include="phero.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
+    <Compile Include="Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="My Project\sales_q.Designer.vb">
+    <Compile Include="sales_q.Designer.vb">
       <DependentUpon>sales_q.vb</DependentUpon>
     </Compile>
-    <Compile Include="My Project\sales_q.vb">
+    <Compile Include="sales_q.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
@@ -132,10 +132,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="My Project\toy_crud.Designer.vb">
+    <Compile Include="toy_crud.Designer.vb">
       <DependentUpon>toy_crud.vb</DependentUpon>
     </Compile>
-    <Compile Include="My Project\toy_crud.vb">
+    <Compile Include="toy_crud.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -143,28 +143,28 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="My Project\age_in.resx">
+    <EmbeddedResource Include="age_in.resx">
       <DependentUpon>age_in.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="My Project\gen_bill.resx">
+    <EmbeddedResource Include="gen_bill.resx">
       <DependentUpon>gen_bill.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="My Project\less_stock.resx">
+    <EmbeddedResource Include="less_stock.resx">
       <DependentUpon>less_stock.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="My Project\phero.resx">
+    <EmbeddedResource Include="phero.resx">
       <DependentUpon>phero.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="My Project\Resources.resx">
+    <EmbeddedResource Include="Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="My Project\sales_q.resx">
+    <EmbeddedResource Include="sales_q.resx">
       <DependentUpon>sales_q.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="My Project\toy_crud.resx">
+    <EmbeddedResource Include="toy_crud.resx">
       <DependentUpon>toy_crud.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

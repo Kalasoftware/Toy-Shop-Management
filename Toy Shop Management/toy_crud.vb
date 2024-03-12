@@ -34,32 +34,36 @@ Public Class toy_crud
     End Sub
 
     Private Sub filldatagrid()
+        'date 12 march' 
+        DataGridView1.DataSource = Nothing
+        DataGridView1.Columns.Clear()
+        DataGridView1.RowTemplate.Height = 100
+
+        Dim debugFolderP As String = AppDomain.CurrentDomain.BaseDirectory
+
+
         ds = New DataSet
         Dim tdp As New OleDbDataAdapter("select * from toys", connection)
         tdp.Fill(ds, "toys")
         DataGridView1.DataSource = ds.Tables("toys")
         ' showing the images into the datagridview begins here 
-        Dim imageColumn As DataGridViewImageColumn = TryCast(DataGridView1.Columns("imageColumn"), DataGridViewImageColumn)
-        If imageColumn Is Nothing Then
-            ' If the image column doesn't exist, add it
-            imageColumn = New DataGridViewImageColumn()
-            imageColumn.HeaderText = "image"
-            imageColumn.Name = "imageColumn"
+        Dim imageColumn As New DataGridViewImageColumn()
+        imageColumn.HeaderText = "Image"
+        imageColumn.Name = "ImageColumn"
+        imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch
+        DataGridView1.Columns.Add(imageColumn)
 
-            imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch
-            DataGridView1.Columns.Add(imageColumn)
-            DataGridView1.Columns("imageColumn").Width = 240
-
-        End If
 
         Try
             For Each row As DataGridViewRow In DataGridView1.Rows
                 Dim filename As String = row.Cells(4).Value
-                If File.Exists(filename) Then
-                    Dim image As Image = Image.FromFile(filename)
+                Dim imagePath As String = Path.Combine(debugFolderP, filename)
+                If File.Exists(imagePath) Then
+                    Dim image As Image = Image.FromFile(imagePath)
                     row.Cells("imageColumn").Value = image
                 Else
-                    ' shwows the error MessageBox.Show("no file path exits like this ")
+                    MessageBox.Show($"Image file not found: {filename}", "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+
                 End If
 
             Next
@@ -94,6 +98,15 @@ Public Class toy_crud
             command.Parameters.AddWithValue("?", CInt(TextBox4.Text))
             command.Parameters.AddWithValue("?", CInt(TextBox5.Text))
 
+            If PictureBox1.Image IsNot Nothing Then
+                Dim debugFolderP As String = Path.GetDirectoryName(Application.ExecutablePath)
+                Dim imagePath As String = Path.Combine(debugFolderP, TextBox3.Text)
+                PictureBox1.Image.Save(imagePath)
+                MessageBox.Show("Image saved to project folder.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Else
+                MessageBox.Show("No image loaded to save.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return
+            End If
 
 
             Dim insrow = command.ExecuteNonQuery()
@@ -113,14 +126,15 @@ Public Class toy_crud
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
+        If OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
             OpenFileDialog1.InitialDirectory = "C:\"
-            OpenFileDialog1.Title = "Open an image file"
-            OpenFileDialog1.Filter = "(image files|*jpg,*png"
-            Dim imagePath As String = OpenFileDialog1.FileName
-            PictureBox1.Image = Image.FromFile(imagePath)
-            TextBox3.Text = imagePath
+            OpenFileDialog1.Title = "Open an Image File"
+            'OpenFileDialog1.Filter = "Image|*.jpg" 'Set the filter to display only image.  
+            PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
+            'Label2.Text = OpenFileDialog1.FileName 'Path of selected file
+            TextBox3.Text = Path.GetFileName(OpenFileDialog1.FileName) 'Path of selected file 
         End If
+
     End Sub
 
 
